@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+<title>Contact – OPA Greek Street Food</title>
+<meta name="description" content="Contact OPA Greek Street Food for orders, feedback, franchising and business enquiries.">
+<style>
+  .contact-grid{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(260px,1fr));max-width:900px;margin-inline:auto}
+  .info-card{padding:var(--s3);border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow)}
+  .info-card h3{color:var(--blue-dark);margin-bottom:.5rem;font-size:1.05rem}
+  .info-card p{font-size:.9rem;color:var(--muted);margin-bottom:.5rem}
+  .info-card__link{display:inline-block;color:var(--blue);font-weight:700;font-size:1rem;word-break:break-word}
+  .info-card__link:hover{text-decoration:underline}
+  .info-card__actions{display:flex;gap:var(--s1);flex-wrap:wrap;margin-top:var(--s2)}
+  .info-card__actions .btn{padding:.6rem 1.3rem;font-size:.85rem}
+  .btn--call{background:var(--blue);color:var(--white)}
+  .btn--call:hover{background:var(--blue-dark)}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="OPA">OPA</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item nav__item--parent">
+          <a class="nav__link" href="menu.html#food">To Eat</a>
+          <div class="dropdown">
+            <a href="menu.html#pitas">Pitas</a><a href="menu.html#bowls">Bowls</a>
+            <a href="menu.html#pitas-burgers">Pitas &amp; Burgers</a><a href="menu.html#wraps">Wraps</a>
+            <a href="menu.html#sides">Sides &amp; Fries</a><a href="menu.html#kids">Kids Menu</a>
+            <a href="menu.html#salads">Salads</a><a href="menu.html#sweet">Ending on a Sweet Note</a>
+          </div>
+        </li>
+        <li class="nav__item nav__item--parent">
+          <a class="nav__link" href="menu.html#drinks">To Drink</a>
+          <div class="dropdown">
+            <a href="menu.html#water">Water</a><a href="menu.html#cold-coffees">Cold Coffees</a>
+            <a href="menu.html#wine">Wine</a><a href="menu.html#beers">Beers</a>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="locations.html">Locations</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html">Blog</a></li>
+        <li class="nav__item"><a class="nav__link" href="careers.html">Careers</a></li>
+        <li class="nav__item"><a class="nav__link active" href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn btn--primary" href="https://opagreekstreet.tryordering.com/" target="_blank" rel="noopener">Order now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We would love to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="info-card">
+          <h3>General enquiries</h3>
+          <a class="info-card__link" href="mailto:info@rhg.al">info@rhg.al</a>
+        </div>
+
+        <div class="info-card">
+          <h3>Marketing</h3>
+          <a class="info-card__link" href="mailto:marketing@rhg.al">marketing@rhg.al</a>
+        </div>
+
+        <div class="info-card">
+          <h3>Business</h3>
+          <a class="info-card__link" href="tel:+355697079300">+355 69 707 9300</a>
+          <div class="info-card__actions">
+            <a class="btn btn--call" href="tel:+355697079300">Call now</a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Delivery</h3>
+          <a class="info-card__link" href="tel:+35544525555">+355 4 452 5555</a>
+          <div class="info-card__actions">
+            <a class="btn btn--call" href="tel:+35544525555">Call now</a>
+            <a class="btn btn--outline" href="menu.html">View menu</a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Instagram</h3>
+          <a class="info-card__link" href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener">@fastfooddibra</a>
+          <div class="info-card__actions">
+            <a class="btn btn--outline" href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener">Follow us</a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Facebook</h3>
+          <a class="info-card__link" href="https://www.facebook.com/opa.albania/" target="_blank" rel="noopener">OPA Albania</a>
+          <div class="info-card__actions">
+            <a class="btn btn--outline" href="https://www.facebook.com/opa.albania/" target="_blank" rel="noopener">Visit page</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><h3 class="footer__title">OPA</h3><ul>
+        <li><a href="menu.html">Menu</a></li><li><a href="blog.html">Blog</a></li><li><a href="locations.html">Locations</a></li></ul></div>
+      <div><h3 class="footer__title">Company</h3><ul>
+        <li><a href="careers.html">Join Us</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li></ul></div>
+      <div><h3 class="footer__title">Contact us</h3><ul>
+        <li><a href="mailto:info@rhg.al">info@rhg.al</a></li><li><a href="mailto:marketing@rhg.al">marketing@rhg.al</a></li>
+        <li>Business: <a href="tel:+355697079300">+355 69 707 9300</a></li>
+        <li>Delivery: <a href="tel:+35544525555">+355 4 452 5555</a></li></ul></div>
+      <div><h3 class="footer__title">Social</h3><ul>
+        <li><a href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/opa.albania/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://vm.tiktok.com/ZML4tMtk6/" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://www.linkedin.com/company/opa-greek-street-food-tirana" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+    </div>
+    <p class="footer__bottom"><span data-year></span> / All rights reserved</p>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
