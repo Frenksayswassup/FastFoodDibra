@@ -1,0 +1,90 @@
+/* ===== Fast Food Dibra – dark menu section (menu.html) =====
+   Everything is prefixed with .dm so it doesn't clash with style.css */
+.dm{
+  --dm-bg:#120f0d; --dm-ink:#f4ede4; --dm-muted:#b5a99b; --dm-line:rgba(244,237,228,.16);
+  --dm-accent:#f2a341; --dm-accent-2:#e2553b;
+  --dm-display:'Bebas Neue',Impact,'Arial Narrow',sans-serif;
+  --dm-body:'Montserrat',system-ui,sans-serif;
+  position:relative; isolation:isolate; overflow:hidden;
+  background:var(--dm-bg); color:var(--dm-ink); font-family:var(--dm-body);
+  padding:clamp(3rem,8vw,6rem) 0;
+}
+
+/* Background photo that fades in when a dish is hovered */
+.dm-bg{position:absolute; inset:0; z-index:-1; pointer-events:none}
+.dm-bg__img{position:absolute; inset:-4%; background:center/cover no-repeat; opacity:0;
+  transform:scale(1.06); transition:opacity .6s ease, transform 1.4s ease; filter:saturate(1.1)}
+.dm-bg__img.is-on{opacity:.42; transform:scale(1)}
+.dm-bg::after{content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(242,163,65,.12), transparent 60%),
+    linear-gradient(180deg, rgba(18,15,13,.55) 0%, rgba(18,15,13,.82) 55%, var(--dm-bg) 100%)}
+
+.dm-inner{width:min(100% - 2rem, 980px); margin-inline:auto}
+
+/* Heading */
+.dm-head{text-align:center; margin-bottom:2.5rem}
+.dm-eyebrow{font-size:.75rem; font-weight:600; letter-spacing:.32em; text-transform:uppercase; color:var(--dm-accent)}
+.dm-title{font-family:var(--dm-display); font-weight:400; line-height:.9;
+  font-size:clamp(4.5rem,16vw,9rem); letter-spacing:.04em; margin:.4rem 0 .6rem}
+.dm-title::after{content:""; display:block; width:64px; height:3px; margin:.9rem auto 0;
+  background:linear-gradient(90deg,var(--dm-accent),var(--dm-accent-2))}
+.dm-lead{color:var(--dm-muted); max-width:36rem; margin-inline:auto}
+.dm-info{display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem 1.5rem; margin-top:1.2rem; font-size:.85rem; font-weight:600}
+.dm-info a{border-bottom:1px solid transparent; transition:.2s}
+.dm-info a:hover{color:var(--dm-accent); border-color:currentColor}
+
+/* Category tabs */
+.dm-tabs{display:flex; gap:.4rem; justify-content:center; flex-wrap:wrap;
+  border-block:1px solid var(--dm-line); padding:.6rem 0}
+.dm-tab{font-family:var(--dm-display); font-size:1.35rem; letter-spacing:.08em; color:var(--dm-muted);
+  padding:.35rem .9rem; border-radius:4px; white-space:nowrap; transition:color .2s, background .2s}
+.dm-tab:hover{color:var(--dm-ink)}
+.dm-tab[aria-selected="true"]{color:var(--dm-bg); background:var(--dm-accent)}
+.dm-tab:focus-visible,.dm-item:focus-visible,.dm-btn:focus-visible{outline:2px solid var(--dm-accent); outline-offset:3px}
+.dm-swipe{display:none}
+
+/* Items */
+.dm-panel{padding-top:2rem; animation:dm-in .45s ease}
+@keyframes dm-in{from{opacity:0; transform:translateY(10px)}}
+.dm-note,.dm-addon{text-align:center; color:var(--dm-muted); font-size:.85rem; font-style:italic}
+.dm-note{margin-bottom:1.2rem}
+.dm-addon{margin-top:1.5rem}
+.dm-addon strong{color:var(--dm-accent); font-style:normal}
+.dm-list{display:grid; grid-template-columns:repeat(2,1fr); gap:0 3.5rem}
+.dm-item{padding:1.1rem .25rem; border-bottom:1px dashed var(--dm-line); cursor:default; outline:none; transition:transform .3s ease}
+.dm-row{display:flex; align-items:baseline; gap:.6rem}
+.dm-row h3{font-size:1rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; transition:color .25s}
+.dm-dots{flex:1; min-width:1rem; border-bottom:2px dotted var(--dm-line); transform:translateY(-.3rem)}
+.dm-price{font-family:var(--dm-display); font-size:1.45rem; letter-spacing:.04em; color:var(--dm-accent); white-space:nowrap}
+.dm-item p{color:var(--dm-muted); font-size:.85rem; margin-top:.2rem; max-width:34ch}
+.dm-tag{font-size:.6rem; vertical-align:middle; letter-spacing:.12em; padding:.15rem .45rem; margin-left:.3rem;
+  border:1px solid var(--dm-accent); color:var(--dm-accent); border-radius:3px; font-weight:600}
+.dm-item:hover,.dm-item.is-active{transform:translateX(6px)}
+.dm-item:hover h3,.dm-item.is-active h3{color:var(--dm-accent)}
+
+/* Sauces list (no prices) */
+.dm-sauces{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:.5rem 0 1.4rem}
+.dm-sauces li{padding:.55rem 1.1rem;border:1px solid var(--dm-line);border-radius:999px;font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+
+/* Call to action */
+.dm-cta{text-align:center; margin-top:3.5rem; padding-top:2.5rem; border-top:1px solid var(--dm-line)}
+.dm-cta p{font-family:var(--dm-display); font-size:1.8rem; letter-spacing:.06em; margin-bottom:1rem}
+.dm-btn{display:inline-block; padding:.9rem 2rem; border-radius:999px; font-weight:700; font-size:.9rem;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--dm-bg);
+  background:linear-gradient(90deg,var(--dm-accent),var(--dm-accent-2)); transition:transform .2s, box-shadow .2s}
+.dm-btn:hover{transform:translateY(-2px); box-shadow:0 10px 30px rgba(226,85,59,.35)}
+
+/* Phones: one column, swipeable tabs */
+@media (max-width:720px){
+  .dm-list{grid-template-columns:1fr}
+  .dm-tabs{justify-content:flex-start; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; scroll-snap-type:x mandatory;
+    margin-inline:-1rem; padding-inline:1rem}
+  .dm-tabs::-webkit-scrollbar{display:none}
+  .dm-tab{scroll-snap-align:start}
+  .dm-swipe{display:block; text-align:right; font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:var(--dm-muted); margin-top:.5rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .dm-panel,.dm-bg__img,.dm-item{animation:none; transition:none}
+}

@@ -1,134 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css">
-<title>OPA – Greek Street Food</title>
-<meta name="description" content="OPA, Albania's leading Greek street food brand. Pitas, bowls, wraps and more.">
+<title>Fast Food Dibra</title>
+<!-- The site is now one page (index.html). This page just forwards old links to the right section. The language the visitor chose is kept. -->
+<meta http-equiv="refresh" content="0; url=index.html#menu">
+<link rel="canonical" href="index.html#menu">
+<script>location.replace('index.html' + (location.hash || '#menu'));</script>
+<style>body{background:#120f0d;color:#f4ede4;font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh}a{color:#f2a341}</style>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="logo" aria-label="OPA">OPA</a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item nav__item--parent">
-          <a class="nav__link" href="menu.html#food">To Eat</a>
-          <div class="dropdown">
-            <a href="menu.html#pitas">Pitas</a><a href="menu.html#bowls">Bowls</a>
-            <a href="menu.html#pitas-burgers">Pitas &amp; Burgers</a><a href="menu.html#wraps">Wraps</a>
-            <a href="menu.html#sides">Sides &amp; Fries</a><a href="menu.html#kids">Kids Menu</a>
-            <a href="menu.html#salads">Salads</a><a href="menu.html#sweet">Ending on a Sweet Note</a>
-          </div>
-        </li>
-        <li class="nav__item nav__item--parent">
-          <a class="nav__link" href="menu.html#drinks">To Drink</a>
-          <div class="dropdown">
-            <a href="menu.html#water">Water</a><a href="menu.html#cold-coffees">Cold Coffees</a>
-            <a href="menu.html#wine">Wine</a><a href="menu.html#beers">Beers</a>
-          </div>
-        </li>
-        <li class="nav__item"><a class="nav__link" href="locations.html">Locations</a></li>
-        <li class="nav__item"><a class="nav__link" href="blog.html">Blog</a></li>
-        <li class="nav__item"><a class="nav__link" href="careers.html">Careers</a></li>
-        <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
-      </ul>
-      <a class="btn btn--primary" href="https://opagreekstreet.tryordering.com/" target="_blank" rel="noopener">Order now</a>
-    </nav>
-  </div>
-</header>
-
-<main id="main">
-  <!-- Hero slider (put images in images/banners/) -->
-  <section class="slider" aria-label="Offers">
-    <div class="slider__track">
-      <a class="slide" href="https://opagreekstreet.tryordering.com/search" target="_blank" rel="noopener">
-        <img src="images/banners/banner-1.jpg" alt="">
-        <div class="slide__caption"><h2>Real Greek Street Food</h2><p>Pitas, bowls and wraps made fresh every day.</p><span class="btn btn--primary">Order now</span></div>
-      </a>
-      <a class="slide" href="https://opagreekstreet.tryordering.com/search" target="_blank" rel="noopener">
-        <img src="images/banners/banner-2.jpg" alt="">
-        <div class="slide__caption"><h2>Crispy &amp; Cheesy</h2><p>Our latest offer is here.</p><span class="btn btn--primary">See offers</span></div>
-      </a>
-      <a class="slide" href="https://opagreekstreet.tryordering.com/search" target="_blank" rel="noopener">
-        <img src="images/banners/banner-3.jpg" alt="">
-        <div class="slide__caption"><h2>Bowl &amp; Go</h2><p>Quick, fresh and full of flavour.</p><span class="btn btn--primary">Order now</span></div>
-      </a>
-    </div>
-    <button class="slider__btn slider__btn--prev" aria-label="Previous">&#8249;</button>
-    <button class="slider__btn slider__btn--next" aria-label="Next">&#8250;</button>
-    <div class="slider__dots"></div>
-  </section>
-
-  <!-- Categories -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section__title">What would you like to eat?</h2>
-      <div class="grid grid--3">
-        <a class="card" href="menu.html#pitas"><img class="card__img" src="images/menu/pitas.jpg" alt="Pitas" loading="lazy"><div class="card__body"><h3 class="card__title">Pitas</h3><span class="card__link">See all →</span></div></a>
-        <a class="card" href="menu.html#bowls"><img class="card__img" src="images/menu/bowls.jpg" alt="Bowls" loading="lazy"><div class="card__body"><h3 class="card__title">Bowls</h3><span class="card__link">See all →</span></div></a>
-        <a class="card" href="menu.html#pitas-burgers"><img class="card__img" src="images/menu/pitas-burgers.jpg" alt="Pitas &amp; Burgers" loading="lazy"><div class="card__body"><h3 class="card__title">Pitas &amp; Burgers</h3><span class="card__link">See all →</span></div></a>
-        <a class="card" href="menu.html#wraps"><img class="card__img" src="images/menu/wraps.jpg" alt="Wraps" loading="lazy"><div class="card__body"><h3 class="card__title">Wraps</h3><span class="card__link">See all →</span></div></a>
-        <a class="card" href="menu.html#sides"><img class="card__img" src="images/menu/sides.jpg" alt="Sides &amp; Fries" loading="lazy"><div class="card__body"><h3 class="card__title">Sides &amp; Fries</h3><span class="card__link">See all →</span></div></a>
-        <a class="card" href="menu.html#kids"><img class="card__img" src="images/menu/kids.jpg" alt="Kids Menu" loading="lazy"><div class="card__body"><h3 class="card__title">Kids Menu</h3><span class="card__link">See all →</span></div></a>
-        <a class="card" href="menu.html#salads"><img class="card__img" src="images/menu/salads.jpg" alt="Salads" loading="lazy"><div class="card__body"><h3 class="card__title">Salads</h3><span class="card__link">See all →</span></div></a>
-        <a class="card" href="menu.html#sweet"><img class="card__img" src="images/menu/sweet.jpg" alt="Ending on a Sweet Note" loading="lazy"><div class="card__body"><h3 class="card__title">Ending on a Sweet Note</h3><span class="card__link">See all →</span></div></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Franchising -->
-  <section class="section cta-band">
-    <div class="container">
-      <small>Thinking about franchising?</small>
-      <h2>Partner with OPA, Albania's leading Greek street food brand.</h2>
-      <a class="btn btn--primary" href="contact.html">Learn more</a>
-    </div>
-  </section>
-
-  <!-- Locations -->
-  <section class="section section--alt">
-    <div class="container">
-      <h2 class="section__title">Locations</h2>
-      <div class="grid grid--3">
-        <div class="location"><h3>OPA Arena</h3><a href="https://www.google.com/maps/search/?api=1&query=OPA+Greek+Street+Food+Stadiumi+Tirana" target="_blank" rel="noopener">Open in Maps →</a></div>
-        <div class="location"><h3>OPA Sami Frashëri</h3><a href="https://www.google.com/maps/search/?api=1&query=OPA+Greek+Street+Food+Bllok+Tirana" target="_blank" rel="noopener">Open in Maps →</a></div>
-        <div class="location"><h3>OPA 9-katëshet</h3><a href="https://maps.app.goo.gl/7NocaV73Dm5Sa7Nw9" target="_blank" rel="noopener">Open in Maps →</a></div>
-        <div class="location"><h3>OPA TEG</h3><a href="https://maps.app.goo.gl/7PBtdRmNoVdLSGN8A" target="_blank" rel="noopener">Open in Maps →</a></div>
-        <div class="location"><h3>OPA QTU</h3><a href="https://maps.app.goo.gl/N5K6uBJ1eKLSMB5P8" target="_blank" rel="noopener">Open in Maps →</a></div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div><h3 class="footer__title">OPA</h3><ul>
-        <li><a href="menu.html">Menu</a></li><li><a href="blog.html">Blog</a></li><li><a href="locations.html">Locations</a></li></ul></div>
-      <div><h3 class="footer__title">Company</h3><ul>
-        <li><a href="careers.html">Join Us</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li></ul></div>
-      <div><h3 class="footer__title">Contact us</h3><ul>
-        <li><a href="mailto:info@rhg.al">info@rhg.al</a></li><li><a href="mailto:marketing@rhg.al">marketing@rhg.al</a></li>
-        <li>Business: <a href="tel:+355697079300">+355 69 707 9300</a></li>
-        <li>Delivery: <a href="tel:+35544525555">+355 4 452 5555</a></li></ul></div>
-      <div><h3 class="footer__title">Social</h3><ul>
-        <li><a href="https://instagram.com/opa.com.al" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://www.facebook.com/opa.albania/" target="_blank" rel="noopener">Facebook</a></li>
-        <li><a href="https://vm.tiktok.com/ZML4tMtk6/" target="_blank" rel="noopener">TikTok</a></li>
-        <li><a href="https://www.linkedin.com/company/opa-greek-street-food-tirana" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
-    </div>
-    <p class="footer__bottom"><span data-year></span> / All rights reserved</p>
-  </div>
-</footer>
-
-<script src="js/nav.js"></script>
-<script src="js/slider.js"></script>
-<script src="js/main.js"></script>
+<p>Po ju dërgojmë te <a href="index.html#menu">Fast Food Dibra</a>…</p>
 </body>
 </html>
