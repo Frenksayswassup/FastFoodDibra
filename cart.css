@@ -85,6 +85,17 @@ body.cart-open{overflow:hidden}
 .cart__send:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(37,211,102,.3)}
 .cart__hint{font-size:.75rem;color:var(--muted);text-align:center;margin-top:.8rem}
 
+/* After WhatsApp opens: ask the customer if they pressed Send */
+.cart__sent[hidden]{display:none}
+.cart__sent{text-align:center;padding:1.5rem .5rem}
+.cart__sent h3{font-family:var(--display);font-weight:400;font-size:1.9rem;letter-spacing:.04em;line-height:1.05;margin-bottom:.6rem}
+.cart__sent p{color:var(--muted);font-size:.9rem;margin-bottom:1.4rem}
+.cart__sent-actions{display:grid;gap:.6rem}
+.cart__sent-actions button{padding:.9rem;border-radius:999px;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+.cart__sent-yes{background:#25d366;color:#0b2914}
+.cart__sent-again{border:1.5px solid var(--line);color:var(--ink)}
+.cart__sent-again:hover{border-color:var(--accent);color:var(--accent)}
+
 /* "Added" message */
 .cart-toast{position:fixed;left:50%;bottom:5.5rem;z-index:70;transform:translate(-50%,20px);opacity:0;pointer-events:none;
   background:#f4ede4;color:#120f0d;font-family:var(--body);font-weight:600;font-size:.85rem;padding:.6rem 1.1rem;border-radius:999px;

@@ -3,48 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title data-en="Fast Food Dibra – Souvlaki, Burgers &amp; Doner in Sukth">Fast Food Dibra – Sufllaqe, Burgera dhe Doner në Sukth</title>
-<meta name="description" content="Fast Food Dibra në Sukth, Durrës: sufllaqe, doner, tortilla, burgera, hot dog, patate, finger pule dhe mozzarella sticks. Porositni online në WhatsApp, me marrje ose dërgesë. Hapur 08:00 – 23:00."
-      data-en-content="Fast Food Dibra in Sukth, Durrës: souvlaki, doner, tortillas, burgers, hot dogs, fries, chicken fingers and mozzarella sticks. Order online on WhatsApp for pick-up or delivery. Open 08:00 – 23:00.">
+<meta name="description" content="Fast Food Dibra në Sukth, Durrës: sufllaqe, doner, tortilla, burgera, hot dog dhe patate. Porositni online në WhatsApp, me marrje ose dërgesë. Hapur 08:00 – 23:00."
+      data-en-content="Fast Food Dibra in Sukth, Durrës: souvlaki, doner, tortillas, burgers, hot dogs and fries. Order online on WhatsApp for pick-up or delivery. Open 08:00 – 23:00.">
 <link rel="canonical" href="https://frenksayswassup.github.io/FastFoodDibra/">
-
-<!-- Icons -->
+<meta name="theme-color" content="#120f0d">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<meta name="theme-color" content="#120f0d">
-
-<!-- Open Graph: how the link looks when shared on WhatsApp, Facebook, Messenger, Viber.
-     Image and URL must be absolute. If the site moves to another address, update them here. -->
-<meta property="og:type" content="restaurant">
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="Fast Food Dibra">
-<meta property="og:title" content="Fast Food Dibra – Sukth, Durrës">
-<meta property="og:description" content="Sufllaqe, doner, burgera dhe patate. Porositni online në WhatsApp, me marrje ose dërgesë. Hapur 08:00 – 23:00.">
+<meta property="og:locale" content="sq_AL">
+<meta property="og:title" content="Fast Food Dibra – Sufllaqe, Burgera dhe Doner në Sukth">
+<meta property="og:description" content="Fast Food Dibra në Sukth, Durrës: sufllaqe, doner, tortilla, burgera, hot dog dhe patate. Porositni online në WhatsApp, me marrje ose dërgesë. Hapur 08:00 – 23:00.">
 <meta property="og:url" content="https://frenksayswassup.github.io/FastFoodDibra/">
 <meta property="og:image" content="https://frenksayswassup.github.io/FastFoodDibra/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Burgera në skarë te Fast Food Dibra">
-<meta property="og:locale" content="sq_AL">
-<meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-
-<!-- Google: restaurant details (address, phone, hours) -->
+<link rel="preload" href="fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="dibra.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Restaurant",
+  "@type": "WebSite",
+  "name": "Fast Food Dibra",
+  "alternateName": "Dibra",
+  "url": "https://frenksayswassup.github.io/FastFoodDibra/",
+  "inLanguage": [
+    "sq",
+    "en"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FastFoodRestaurant",
+  "@id": "https://frenksayswassup.github.io/FastFoodDibra/#restaurant",
   "name": "Fast Food Dibra",
   "url": "https://frenksayswassup.github.io/FastFoodDibra/",
-  "image": "https://frenksayswassup.github.io/FastFoodDibra/images/og-image.jpg",
+  "image": [
+    "https://frenksayswassup.github.io/FastFoodDibra/images/og-image.jpg",
+    "https://frenksayswassup.github.io/FastFoodDibra/images/hero.jpg"
+  ],
   "logo": "https://frenksayswassup.github.io/FastFoodDibra/images/apple-touch-icon.png",
   "telephone": "+355695570477",
-  "foundingDate": "2011",
-  "servesCuisine": ["Fast Food", "Sufllaqe", "Doner", "Burgers"],
-  "priceRange": "250–600 ALL",
-  "currenciesAccepted": "ALL",
-  "menu": "https://frenksayswassup.github.io/FastFoodDibra/#menu",
-  "acceptsReservations": false,
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Sukth",
@@ -52,33 +60,40 @@
     "addressCountry": "AL"
   },
   "hasMap": "https://www.google.com/maps/place/fast+food+dibra/data=!4m2!3m1!1s0x134fd73f0eca9e05:0x3f14ae882ff30e26",
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "08:00",
-    "closes": "23:00"
-  }],
+  "servesCuisine": [
+    "Fast food",
+    "Sufllaqe",
+    "Burgera",
+    "Doner"
+  ],
+  "priceRange": "250–600 L",
+  "currenciesAccepted": "ALL",
+  "hasMenu": "https://frenksayswassup.github.io/FastFoodDibra/menu.html",
+  "acceptsReservations": false,
+  "foundingDate": "2011",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "08:00",
+      "closes": "23:00"
+    }
+  ],
   "sameAs": [
     "https://www.instagram.com/fastfooddibra/",
     "https://www.tiktok.com/@fast.food.dibra"
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="dibra.css">
-<link rel="stylesheet" href="menu.css">
-<link rel="stylesheet" href="cart.css">
-</head>
-<body>
+</head><body class="page-home">
 <!--
   LANGUAGES (Albanian first, English second)
   - The Albanian text is written normally inside each tag.
   - The English text is in the data-en="..." attribute on the same tag.
   - For alt text, aria-label, title and meta content, the English is in data-en-alt, data-en-aria-label, data-en-title, data-en-content.
   - To change a text: edit the Albanian inside the tag AND the English in data-en. Write & as &amp; inside data-en.
-  - The SQ / EN buttons in the header switch language (js/lang.js). Link straight to English with index.html?lang=en
+  - The SQ / EN buttons in the header switch language (js/lang.js). Link straight to English with ?lang=en
+  - Header and footer are the same on every page: change them on all 4 pages.
 
   PHOTOS live in images/ (hero.jpg, about-1.jpg, about-2.jpg, gallery/1-8.jpg, menu/*.jpg).
   Any photo that is missing just shows a dark placeholder, nothing breaks.
@@ -87,17 +102,15 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a href="#top" class="logo" aria-label="Fast Food Dibra – kreu" data-en-aria-label="Fast Food Dibra – home">Fast Food <span>Dibra</span></a>
+    <a href="./" class="logo" aria-label="Fast Food Dibra – kreu" data-en-aria-label="Fast Food Dibra – home">Fast Food <span>Dibra</span></a>
     <nav class="nav" aria-label="Kryesore" data-en-aria-label="Main">
       <ul class="nav__list">
-        <li><a class="nav__link" href="#top" data-en="Home">Kreu</a></li>
-        <li><a class="nav__link" href="#menu" data-en="Menu">Menuja</a></li>
-        <li><a class="nav__link" href="#about" data-en="About">Rreth nesh</a></li>
-        <li><a class="nav__link" href="#gallery" data-en="Gallery">Galeria</a></li>
-        <li><a class="nav__link" href="#faq" data-en="FAQ">Pyetje</a></li>
-        <li><a class="nav__link" href="#visit" data-en="Contact">Kontakt</a></li>
+        <li><a class="nav__link" href="./" data-en="Home" aria-current="page">Kreu</a></li>
+        <li><a class="nav__link" href="menu.html" data-en="Menu">Menuja</a></li>
+        <li><a class="nav__link" href="rreth-nesh.html" data-en="About">Rreth nesh</a></li>
+        <li><a class="nav__link" href="kontakt.html" data-en="Contact">Kontakt</a></li>
       </ul>
-      <a class="btn btn--fire" href="#menu" data-en="Order now">Porosit tani</a>
+      <a class="btn btn--fire" href="menu.html" data-en="Order online">Porosit online</a>
     </nav>
     <div class="lang" role="group" aria-label="Gjuha" data-en-aria-label="Language">
       <button type="button" data-lang="sq" aria-pressed="true" title="Shqip">SQ</button>
@@ -116,7 +129,7 @@
       <h1 class="hero__title"><span data-en="Hot. Fresh.">I nxehtë. I freskët.</span><br><em data-en="Fast.">Shpejt.</em></h1>
       <p class="hero__text" data-en="Souvlaki, doner, tortillas, burgers off the grill and fries made fresh, right here in Sukth.">Sufllaqe, doner, tortilla, burgera nga skara dhe patate të sapobëra, këtu në Sukth.</p>
       <div class="hero__actions">
-        <a class="btn btn--fire" href="#menu" data-en="See the menu">Shiko menunë</a>
+        <a class="btn btn--fire" href="menu.html" data-en="Order online">Porosit online</a>
         <a class="btn btn--ghost" href="tel:+355695570477" data-en="Call 069 557 0477">Telefono 069 557 0477</a>
       </div>
     </div>
@@ -126,7 +139,7 @@
   <section class="info" aria-label="Informacion i shpejtë" data-en-aria-label="Quick info">
     <div class="wrap">
       <div class="info__item"><h3 data-en="Find us">Na gjeni</h3><p><a href="https://www.google.com/maps/place/fast+food+dibra/data=!4m2!3m1!1s0x134fd73f0eca9e05:0x3f14ae882ff30e26" target="_blank" rel="noopener" data-en="Sukth, Durrës · Open in Maps →">Sukth, Durrës · Hape në Maps →</a></p></div>
-      <div class="info__item"><h3 data-en="Order">Porosit</h3><p><a href="#menu" data-en="Online on WhatsApp →">Online në WhatsApp →</a> <span data-en="pick-up or delivery">merre me vete ose dërgesë</span></p></div>
+      <div class="info__item"><h3 data-en="Order">Porosit</h3><p><a href="menu.html" data-en="Online on WhatsApp →">Online në WhatsApp →</a> <span data-en="pick-up or delivery">merre me vete ose dërgesë</span></p></div>
       <div class="info__item"><h3 data-en="Hours">Orari</h3><p data-en="Open 08:00 – 23:00">Hapur 08:00 – 23:00</p></div>
     </div>
   </section>
@@ -142,254 +155,45 @@
         <p class="eyebrow" data-en="Who we are">Kush jemi</p>
         <h2 class="h2" data-en="Sukth's spot for real street food">Shija e vërtetë e Sukthit</h2>
         <p class="lead" data-en="Fast Food Dibra has been firing up the grill since 2011. Souvlaki and doner wrapped in warm pita or tortilla, burgers made the way they should be, and crispy chicken fingers and mozzarella sticks on the side.">Fast Food Dibra e ndez skarën që nga viti 2011. Sufllaqe dhe doner të mbështjella në pita të ngrohtë ose tortilla, burgera të bërë siç duhet, dhe finger pule e mozzarella sticks krokante përkrah.</p>
-        <p class="lead" style="margin-top:1rem" data-en="Grab a quick lunch, a late dinner or a platter for the whole group. Whatever you're craving, it's ready fast.">Ejani për një drekë të shpejtë, një darkë vonë apo një pjatë për gjithë shoqërinë. Çfarëdo që t'ju hahet, bëhet gati shpejt.</p>
-        <div class="about__stats">
-          <div><strong>8</strong><span data-en="Menu categories">Kategori në menu</span></div>
-          <div><strong>100%</strong><span data-en="Made to order">Gatuar me porosi</span></div>
-          <div><strong>2011</strong><span data-en="Serving since">Që nga viti</span></div>
-        </div>
-        <a class="btn btn--ghost" href="#menu" data-en="Explore the menu">Zbulo menunë</a>
-      </div>
-    </div>
-    <div class="ticker" aria-hidden="true"><div class="ticker__track">
-      <span data-en="Souvlaki">Sufllaqe</span><span>Doner</span><span>Tortilla</span><span data-en="Burgers">Burgera</span><span>Hot Dog</span><span data-en="Fries">Patate</span><span data-en="Chicken Fingers">Finger Pule</span><span>Mozzarella Sticks</span><span>Onion Rings</span>
-      <span data-en="Souvlaki">Sufllaqe</span><span>Doner</span><span>Tortilla</span><span data-en="Burgers">Burgera</span><span>Hot Dog</span><span data-en="Fries">Patate</span><span data-en="Chicken Fingers">Finger Pule</span><span>Mozzarella Sticks</span><span>Onion Rings</span>
-    </div></div>
-  </section>
-
-  <!-- Menu: names and prices from the official Fast Food Dibra menu board.
-       To change a price, edit the number in <span class="dm-price">. The basket reads prices from here. -->
-  <section class="dm" id="menu" aria-labelledby="dm-title">
-    <div class="dm-bg" aria-hidden="true"><div class="dm-bg__img"></div><div class="dm-bg__img"></div></div>
-
-    <div class="dm-inner">
-      <header class="dm-head">
-        <p class="dm-eyebrow" data-en="Taste • Quality • Speed">Shije • Cilësi • Shpejtësi</p>
-        <h2 class="dm-title" id="dm-title" data-en="Menu">Menuja</h2>
-        <p class="dm-lead" data-en="Tap + to add to your basket and order on WhatsApp.">Shtypni + për ta shtuar në shportë dhe porositni në WhatsApp.</p>
-        <div class="dm-info">
-          <a href="tel:+355695570477">☎ 069 557 0477</a>
-          <a href="https://maps.app.goo.gl/R8oNc75AwFTJSSRL6" target="_blank" rel="noopener" data-en="📍 Find us in Sukth">📍 Na gjeni në Sukth</a>
-          <a href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener">@fastfooddibra</a>
-        </div>
-      </header>
-
-      <div class="dm-tabs" role="tablist" aria-label="Kategoritë e menusë" data-en-aria-label="Menu categories">
-        <button class="dm-tab" role="tab" id="tab-sufllaqe" aria-controls="sufllaqe" aria-selected="true" data-en="Souvlaki">Sufllaqe</button>
-        <button class="dm-tab" role="tab" id="tab-doner" aria-controls="doner" aria-selected="false" tabindex="-1">Doner &amp; Tortilla</button>
-        <button class="dm-tab" role="tab" id="tab-sanduice" aria-controls="sanduice" aria-selected="false" tabindex="-1" data-en="Sandwiches">Sanduiçe</button>
-        <button class="dm-tab" role="tab" id="tab-burgera" aria-controls="burgera" aria-selected="false" tabindex="-1" data-en="Burgers">Burgera</button>
-        <button class="dm-tab" role="tab" id="tab-patate" aria-controls="patate" aria-selected="false" tabindex="-1" data-en="Fries">Patate</button>
-        <button class="dm-tab" role="tab" id="tab-shtesa" aria-controls="shtesa" aria-selected="false" tabindex="-1" data-en="Extras">Shtesa</button>
-        <button class="dm-tab" role="tab" id="tab-finger" aria-controls="finger" aria-selected="false" tabindex="-1" data-en="Chicken Fingers">Finger Pule</button>
-        <button class="dm-tab" role="tab" id="tab-salca" aria-controls="salca" aria-selected="false" tabindex="-1" data-en="Sauces">Salca</button>
-      </div>
-      <p class="dm-swipe" data-en="Swipe for more categories →">Rrëshqit për më shumë kategori →</p>
-
-      <!-- Sufllaqe -->
-      <div class="dm-panel" role="tabpanel" id="sufllaqe" aria-labelledby="tab-sufllaqe">
-        <ul class="dm-list">
-          <li class="dm-item" tabindex="0" data-id="sufllaqe-normale" data-img="images/menu/gyro-pork.jpg"><div class="dm-row"><h3 data-en="Souvlaki – Regular">Sufllaqe Normale</h3><span class="dm-dots"></span><span class="dm-price">250 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="sufllaqe-dopio" data-img="images/menu/gyro-chicken.jpg"><div class="dm-row"><h3 data-en="Souvlaki – Double Pita">Sufllaqe Dopio Pite</h3><span class="dm-dots"></span><span class="dm-price">300 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="sufllaqe-mesme" data-img="images/menu/souvlaki.jpg"><div class="dm-row"><h3 data-en="Souvlaki – Medium">Sufllaqe e Mesme</h3><span class="dm-dots"></span><span class="dm-price">350 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="sufllaqe-hapur" data-img="images/menu/gyro-plate.jpg"><div class="dm-row"><h3 data-en="Open Souvlaki (plate)">Sufllaqe e Hapur</h3><span class="dm-dots"></span><span class="dm-price">600 L</span></div></li>
-        </ul>
-      </div>
-
-      <!-- Doner & Tortilla -->
-      <div class="dm-panel" role="tabpanel" id="doner" aria-labelledby="tab-doner" hidden>
-        <ul class="dm-list">
-          <li class="dm-item" tabindex="0" data-id="doner" data-img="images/menu/wrap.jpg"><div class="dm-row"><h3>Doner</h3><span class="dm-dots"></span><span class="dm-price">250 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="tortilla-klasike" data-img="images/menu/gyro-plate.jpg"><div class="dm-row"><h3 data-en="Classic Tortilla">Tortilla Klasike</h3><span class="dm-dots"></span><span class="dm-price">300 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="tortilla-mix" data-img="images/menu/wrap.jpg"><div class="dm-row"><h3 data-en="Mixed Tortilla">Tortilla Mix</h3><span class="dm-dots"></span><span class="dm-price">400 L</span></div></li>
-        </ul>
-      </div>
-
-      <!-- Sanduiçe -->
-      <div class="dm-panel" role="tabpanel" id="sanduice" aria-labelledby="tab-sanduice" hidden>
-        <ul class="dm-list">
-          <li class="dm-item" tabindex="0" data-id="hotdog" data-img="images/menu/hotdog.jpg"><div class="dm-row"><h3>Hot Dog</h3><span class="dm-dots"></span><span class="dm-price">250 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="sanduic" data-img="images/menu/burger-dibra.jpg"><div class="dm-row"><h3 data-en="Sandwich">Sanduiç</h3><span class="dm-dots"></span><span class="dm-price">250 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="skepasti" data-img="images/menu/burger-dibra.jpg"><div class="dm-row"><h3>Skepasti</h3><span class="dm-dots"></span><span class="dm-price">500 L</span></div></li>
-        </ul>
-      </div>
-
-      <!-- Burgera -->
-      <div class="dm-panel" role="tabpanel" id="burgera" aria-labelledby="tab-burgera" hidden>
-        <ul class="dm-list">
-          <li class="dm-item" tabindex="0" data-id="chicken-burger" data-img="images/menu/burger-chicken.jpg"><div class="dm-row"><h3 data-en="Classic Chicken Burger">Chicken Burger Klasik</h3><span class="dm-dots"></span><span class="dm-price">300 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="double-chicken-burger" data-img="images/menu/burger-chicken.jpg"><div class="dm-row"><h3>Double Chicken Burger</h3><span class="dm-dots"></span><span class="dm-price">450 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="beef-burger" data-img="images/menu/burger-cheese.jpg"><div class="dm-row"><h3>Beef Burger</h3><span class="dm-dots"></span><span class="dm-price">500 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="double-beef-burger" data-img="images/menu/burger-classic.jpg"><div class="dm-row"><h3>Double Beef Burger</h3><span class="dm-dots"></span><span class="dm-price">600 L</span></div></li>
-        </ul>
-      </div>
-
-      <!-- Patate -->
-      <div class="dm-panel" role="tabpanel" id="patate" aria-labelledby="tab-patate" hidden>
-        <ul class="dm-list">
-          <li class="dm-item" tabindex="0" data-id="patate-klasike" data-img="images/menu/fries.jpg"><div class="dm-row"><h3 data-en="Classic Fries">Patate Klasike</h3><span class="dm-dots"></span><span class="dm-price">250 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="patate-gouda" data-img="images/menu/fries-cheese.jpg"><div class="dm-row"><h3 data-en="Fries with Gouda">Patate Gouda</h3><span class="dm-dots"></span><span class="dm-price">350 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="patate-sos" data-img="images/menu/fries.jpg"><div class="dm-row"><h3 data-en="Fries with Sauce">Patate me Sos</h3><span class="dm-dots"></span><span class="dm-price">350 L</span></div></li>
-        </ul>
-      </div>
-
-      <!-- Shtesa -->
-      <div class="dm-panel" role="tabpanel" id="shtesa" aria-labelledby="tab-shtesa" hidden>
-        <ul class="dm-list">
-          <li class="dm-item" tabindex="0" data-id="onion-rings" data-img="images/menu/nuggets.jpg"><div class="dm-row"><h3>Onion Rings</h3><span class="dm-dots"></span><span class="dm-price">300 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="chicken-nuggets" data-img="images/menu/nuggets.jpg"><div class="dm-row"><h3>Chicken Nuggets</h3><span class="dm-dots"></span><span class="dm-price">350 L</span></div></li>
-        </ul>
-      </div>
-
-      <!-- Finger Pule -->
-      <div class="dm-panel" role="tabpanel" id="finger" aria-labelledby="tab-finger" hidden>
-        <ul class="dm-list">
-          <li class="dm-item" tabindex="0" data-id="finger-pule" data-img="images/menu/nuggets.jpg"><div class="dm-row"><h3 data-en="Chicken Fingers">Finger Pule</h3><span class="dm-dots"></span><span class="dm-price">450 L</span></div></li>
-          <li class="dm-item" tabindex="0" data-id="mozzarella-sticks" data-img="images/menu/mix-platter.jpg"><div class="dm-row"><h3>Mozzarella Sticks</h3><span class="dm-dots"></span><span class="dm-price">500 L</span></div></li>
-        </ul>
-      </div>
-
-      <!-- Salca (no price on the menu board, so they can't go in the basket: customers write them in the notes) -->
-      <div class="dm-panel" role="tabpanel" id="salca" aria-labelledby="tab-salca" hidden>
-        <ul class="dm-sauces">
-          <li data-en="Mayonnaise">Majonezë</li>
-          <li>Ketchup</li>
-          <li data-en="Mustard">Mustardë</li>
-          <li data-en="Spicy sauce">Salcë Pikante</li>
-          <li>Tzatziki</li>
-          <li>Barbecue</li>
-        </ul>
-        <p class="dm-note" data-en="Want a sauce? Write it in the notes when you send your order.">Dëshironi salcë? Shkruajeni te shënimet kur dërgoni porosinë.</p>
-      </div>
-
-      <div class="dm-cta">
-        <p data-en="Hungry? Order on WhatsApp or call us.">Ju ka marrë uria? Porositni në WhatsApp ose na telefononi.</p>
-        <a class="dm-btn" href="tel:+355695570477" data-en="Call 069 557 0477">Telefono 069 557 0477</a>
+        <a class="btn btn--ghost" href="rreth-nesh.html" data-en="More about us">Më shumë për ne</a>
       </div>
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section class="section gallery" id="gallery">
+  <!-- Menu categories -->
+  <section class="section cats" id="kategorite">
     <div class="wrap">
-      <div class="gallery__head reveal">
+      <div class="cats__head reveal">
         <div>
-          <p class="eyebrow">@fastfooddibra</p>
-          <h2 class="h2" data-en="Fresh from the kitchen">Direkt nga kuzhina</h2>
+          <p class="eyebrow" data-en="Our menu">Menuja jonë</p>
+          <h2 class="h2" data-en="What are you craving?">Çfarë ju hahet?</h2>
         </div>
-        <a class="btn btn--fire" href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener" data-en="Follow on Instagram">Na ndiqni në Instagram</a>
+        <a class="btn btn--fire" href="menu.html" data-en="Full menu &amp; prices">Gjithë menuja dhe çmimet</a>
       </div>
-      <div class="gallery__grid reveal">
-        <a class="ph" href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener"><img src="images/gallery/1.jpg" alt="Wrap në skarë me patate me djathë dhe salca" data-en-alt="Grilled wrap with cheesy fries and dips" loading="lazy"></a>
-        <a class="ph" href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener"><img src="images/gallery/2.jpg" alt="Cheeseburgerë me bukë me susam në skarë" data-en-alt="Cheeseburgers with sesame buns on the grill" loading="lazy"></a>
-        <a class="ph" href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener"><img src="images/gallery/3.jpg" alt="Kuti me rrathë qepe, copa pule dhe patate me djathë" data-en-alt="Box of onion rings, chicken strips and potatoes with cheese" loading="lazy"></a>
-        <a class="ph" href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener"><img src="images/gallery/4.jpg" alt="Dy pita gyro me patate dhe salcë" data-en-alt="Two gyro pitas with fries and sauce" loading="lazy"></a>
-        <a class="ph" href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener"><img src="images/gallery/5.jpg" alt="Burger dyfish me pulë krokante dhe djathë" data-en-alt="Double crispy chicken burger with cheese" loading="lazy"></a>
-        <a class="ph" href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener"><img src="images/gallery/6.jpg" alt="Burger pule me patate të erëzuara dhe ketchup" data-en-alt="Chicken burger with seasoned fries and ketchup" loading="lazy"></a>
-        <a class="ph" href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener"><img src="images/gallery/7.jpg" alt="Wrap të thekur në dërrasa druri me salca" data-en-alt="Toasted wraps on wooden boards with dips" loading="lazy"></a>
-        <a class="ph" href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener"><img src="images/gallery/8.jpg" alt="Burger dhe pita pule me djathë" data-en-alt="Burger and cheesy chicken pita" loading="lazy"></a>
+      <div class="cats__grid reveal">
+        <a class="cat" href="menu.html#sufllaqe"><img src="images/gallery/4.jpg" alt="" loading="lazy"><span data-en="from 250 L">nga 250 L</span><strong data-en="Souvlaki">Sufllaqe</strong></a>
+        <a class="cat" href="menu.html#doner"><img src="images/gallery/1.jpg" alt="" loading="lazy"><span data-en="from 250 L">nga 250 L</span><strong data-en="Doner &amp; Tortilla">Doner &amp; Tortilla</strong></a>
+        <a class="cat" href="menu.html#burgera"><img src="images/gallery/2.jpg" alt="" loading="lazy"><span data-en="from 300 L">nga 300 L</span><strong data-en="Burgers">Burgera</strong></a>
+        <a class="cat" href="menu.html#finger"><img src="images/gallery/3.jpg" alt="" loading="lazy"><span data-en="from 300 L">nga 300 L</span><strong data-en="Fingers &amp; Sides">Finger &amp; Shtesa</strong></a>
       </div>
     </div>
   </section>
 
-  <!-- FAQ (TODO: check the answers with the owner) -->
-  <section class="section faq" id="faq">
+  <section class="cta-band">
     <div class="wrap">
-      <div class="reveal">
-        <p class="eyebrow" data-en="Good to know">Mirë të dini</p>
-        <h2 class="h2" data-en="Questions?">Pyetje?</h2>
-        <p class="lead"><span data-en="Can't find your answer? Call us on">Nuk e gjeni përgjigjen? Na telefononi në</span> <a href="tel:+355695570477" style="color:var(--accent)">069 557 0477</a> <span data-en="or send a message on Instagram.">ose na shkruani në Instagram.</span></p>
-      </div>
-      <div class="reveal">
-        <details open><summary data-en="How do I order?">Si mund të porosis?</summary><p><span data-en="Tap + next to the dishes in the">Shtypni + te ushqimet në</span> <a href="#menu" data-en="menu">menu</a><span data-en=", open the basket and send your order on WhatsApp. You can also call us on">, hapni shportën dhe dërgojeni porosinë në WhatsApp. Mund të na telefononi edhe në</span> <a href="tel:+355695570477">069 557 0477</a>.</p></details>
-        <details><summary data-en="Do you deliver?">A bëni dërgesa në shtëpi?</summary><p data-en="Yes. In the basket choose Delivery, then write your address or share your GPS location.">Po. Te shporta zgjidhni Dërgesë, pastaj shkruani adresën ose dërgoni vendndodhjen tuaj GPS.</p></details>
-        <details><summary data-en="Can I order for a big group?">A mund të porosis për një grup të madh?</summary><p data-en="Yes. Send your order on WhatsApp or call ahead so it is ready when you arrive.">Po. Dërgoni porosinë në WhatsApp ose telefononi më herët që të jetë gati kur të vini.</p></details>
-        <details><summary data-en="Where exactly are you?">Ku ndodheni saktësisht?</summary><p><span data-en="We're in Sukth, Durrës.">Jemi në Sukth, Durrës.</span> <a href="https://www.google.com/maps/place/fast+food+dibra/data=!4m2!3m1!1s0x134fd73f0eca9e05:0x3f14ae882ff30e26" target="_blank" rel="noopener" data-en="Open us in Google Maps">Na hapni në Google Maps</a> <span data-en="for directions.">për udhëzime.</span></p></details>
-        <details><summary data-en="Where can I see what's new?">Ku mund të shoh të rejat?</summary><p><span data-en="Follow">Ndiqni</span> <a href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener">@fastfooddibra</a> <span data-en="on Instagram for new dishes, offers and videos from the kitchen.">në Instagram për pjata të reja, oferta dhe video nga kuzhina.</span></p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Visit / contact -->
-  <section class="section visit" id="visit">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="eyebrow" data-en="Come hungry">Ejani të uritur</p>
-        <h2 class="h2" data-en="Visit us">Na vizitoni</h2>
-        <ul class="visit__list">
-          <li><span data-en="Address">Adresa</span><a href="https://www.google.com/maps/place/fast+food+dibra/data=!4m2!3m1!1s0x134fd73f0eca9e05:0x3f14ae882ff30e26" target="_blank" rel="noopener" data-en="Sukth, Durrës, Albania">Sukth, Durrës, Shqipëri</a></li>
-          <li><span data-en="Phone">Telefoni</span><a href="tel:+355695570477">+355 69 557 0477</a></li>
-          <li><span>Instagram</span><a href="https://www.instagram.com/fastfooddibra/" target="_blank" rel="noopener">@fastfooddibra</a></li>
-          <li><span>TikTok</span><a href="https://www.tiktok.com/@fast.food.dibra" target="_blank" rel="noopener">@fast.food.dibra</a></li>
-          <li><span data-en="Hours">Orari</span><p>08:00 – 23:00</p></li>
-        </ul>
-        <a class="btn btn--fire" href="#menu" data-en="Order now">Porosit tani</a>
-      </div>
-      <div class="visit__map reveal">
-        <iframe title="Harta e Fast Food Dibra në Sukth" data-en-title="Map showing Fast Food Dibra in Sukth" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://maps.google.com/maps?q=Fast%20Food%20Dibra%2C%20Sukth&amp;z=15&amp;output=embed"></iframe>
+      <h2 data-en="Order in a minute on WhatsApp">Porosit për një minutë në WhatsApp</h2>
+      <div class="hero__actions">
+        <a class="btn btn--ghost" href="menu.html" data-en="Start my order">Fillo porosinë</a>
       </div>
     </div>
   </section>
 </main>
 
-<!-- ===== Basket (js/cart.js) – orders are sent to WhatsApp in Albanian =====
-     WhatsApp number is set in js/cart.js (WHATSAPP_NUMBER). -->
-<button class="cart-fab" type="button" aria-haspopup="dialog" aria-controls="cart" aria-label="Hap shportën" data-en-aria-label="Open basket" hidden>
-  <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM5.2 4l.4 2H21l-2.2 8.1a2 2 0 0 1-1.9 1.4H8.4a2 2 0 0 1-2-1.6L4.2 2H1V0h4.8l.4 2Z" transform="translate(0 1)"/></svg>
-  <span class="cart-fab__count" aria-live="polite">0</span>
-  <span class="cart-fab__total"></span>
-</button>
-
-<div class="cart" id="cart" hidden>
-  <div class="cart__overlay" data-cart-close></div>
-  <aside class="cart__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
-    <header class="cart__head">
-      <h2 id="cart-title" data-en="Your basket">Shporta juaj</h2>
-      <button class="cart__close" type="button" data-cart-close aria-label="Mbyll" data-en-aria-label="Close">✕</button>
-    </header>
-
-    <div class="cart__body">
-      <p class="cart__empty" data-en="Your basket is empty. Add something tasty from the menu!">Shporta është bosh. Shtoni diçka të shijshme nga menuja!</p>
-      <ul class="cart__list"></ul>
-
-      <form class="cart__form" novalidate>
-        <div class="cart__total"><span data-en="Total">Totali</span><strong class="cart__sum">0 L</strong></div>
-
-        <fieldset class="cart__mode">
-          <legend data-en="How do you want it?">Si e dëshironi?</legend>
-          <label><input type="radio" name="mode" value="pickup" checked> <span data-en="Pick up">Marr me vete</span></label>
-          <label><input type="radio" name="mode" value="delivery"> <span data-en="Delivery">Dërgesë</span></label>
-        </fieldset>
-
-        <label class="cart__field"><span data-en="Your name *">Emri juaj *</span><input name="name" autocomplete="name" required></label>
-        <div class="cart__delivery" hidden>
-          <label class="cart__field"><span data-en="Delivery address">Adresa e dërgesës</span><input name="address" autocomplete="street-address" placeholder="Rruga, pallati, kati" data-en-placeholder="Street, building, floor"></label>
-          <div class="cart__gps">
-            <button type="button" class="cart__gps-btn"><span aria-hidden="true">📍</span> <span class="cart__gps-label" data-en="Share my location (GPS)">Dërgo vendndodhjen time (GPS)</span></button>
-            <p class="cart__gps-status" aria-live="polite"></p>
-          </div>
-          <p class="cart__gps-note" data-en="Write your address, share your GPS location, or both.">Shkruani adresën, dërgoni vendndodhjen GPS, ose të dyja.</p>
-        </div>
-        <label class="cart__field"><span data-en="Notes (optional)">Shënime (opsionale)</span><textarea name="notes" rows="2" placeholder="p.sh. pa qepë, salcë pikante" data-en-placeholder="e.g. no onions, spicy sauce"></textarea></label>
-        <p class="cart__error" role="alert" hidden></p>
-
-        <button class="cart__send" type="submit">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
-          <span data-en="Send order on WhatsApp">Dërgo porosinë në WhatsApp</span>
-        </button>
-        <p class="cart__hint" data-en="WhatsApp opens with your order written in Albanian. Just press send. The restaurant will confirm your order and final price.">WhatsApp hapet me porosinë tuaj të shkruar. Thjesht shtypni dërgo. Restoranti do t'ju konfirmojë porosinë dhe çmimin përfundimtar.</p>
-      </form>
-    </div>
-  </aside>
-</div>
-<div class="cart-toast" role="status" aria-live="polite"></div>
-
 <footer class="site-footer">
   <div class="wrap">
-    <a href="#top" class="logo">Fast Food <span>Dibra</span></a>
+    <a href="./" class="logo">Fast Food <span>Dibra</span></a>
     <nav class="footer__links" aria-label="Fundi i faqes" data-en-aria-label="Footer">
-      <a href="#menu" data-en="Menu">Menuja</a><a href="#about" data-en="About">Rreth nesh</a><a href="#gallery" data-en="Gallery">Galeria</a><a href="#faq" data-en="FAQ">Pyetje</a><a href="#visit" data-en="Contact">Kontakt</a>
+      <a href="menu.html" data-en="Menu">Menuja</a><a href="rreth-nesh.html" data-en="About">Rreth nesh</a><a href="kontakt.html" data-en="Contact">Kontakt</a><a href="kontakt.html#faq" data-en="FAQ">Pyetje</a>
     </nav>
 
     <div class="footer__social">
@@ -418,8 +222,6 @@
 <script src="js/lang.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/main.js"></script>
-<script src="js/menu.js"></script>
 <script src="js/site.js"></script>
-<script src="js/cart.js"></script>
 </body>
 </html>
