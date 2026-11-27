@@ -1,5 +1,6 @@
 // Fast Food Dibra – basket + order by WhatsApp
 // Every .dm-item in the menu gets an "add" button. The order is sent as an Albanian WhatsApp message.
+// The basket is only emptied after the customer confirms they pressed Send in WhatsApp.
 (() => {
   const WHATSAPP_NUMBER = '355695570477';   // 069 557 0477 in international format, no + or spaces
   const KEY = 'dibra-cart';
@@ -16,6 +17,8 @@
   const deliveryBox = cartEl.querySelector('.cart__delivery');
   const gpsBtn = cartEl.querySelector('.cart__gps-btn');
   const gpsStatus = cartEl.querySelector('.cart__gps-status');
+  const sentEl = cartEl.querySelector('.cart__sent');
+  let sentUrl = null;   // WhatsApp link of the order just opened, while we wait for the customer to confirm
   let gps = null;   // { lat, lng, acc } once the customer shares their location
   const toast = document.querySelector('.cart-toast');
 
@@ -36,7 +39,7 @@
     gpsFail: ['Vendndodhja nuk u gjet. Provoni përsëri ose shkruani adresën.', 'Could not find your location. Try again or write your address.'],
     gpsNone: ['Ky shfletues nuk e mbështet GPS-in. Ju lutem shkruani adresën.', 'This browser does not support GPS. Please write your address.'],
     empty:   ['Shporta është bosh.', 'Your basket is empty.'],
-    sent:    ['✓ Porosia u hap në WhatsApp. Faleminderit!', '✓ Order opened in WhatsApp. Thank you!'],
+    thanks:  ['✓ Faleminderit! Restoranti do t\'ju konfirmojë porosinë.', '✓ Thank you! The restaurant will confirm your order.'],
   };
   const t = k => T[k][isEn() ? 1 : 0];
   const money = n => `${n.toLocaleString('de-DE')} L`;
@@ -112,8 +115,11 @@
       b.classList.toggle('in-cart', !!cart[b.dataset.id]);
     });
 
+    const waiting = !!sentUrl && n > 0;
+    if (sentEl) sentEl.hidden = !waiting;
+    listEl.hidden = waiting;
     emptyEl.hidden = n > 0;
-    form.hidden = n === 0;
+    form.hidden = n === 0 || waiting;
     sumEl.textContent = money(total());
     listEl.innerHTML = '';
     lines().forEach(({ p, qty }) => {
@@ -152,6 +158,7 @@
     cartEl.querySelector('.cart__close').focus();
   }
   function close() {
+    sentUrl = null;   // reopening the basket shows the order form again
     cartEl.classList.remove('is-open');
     document.body.classList.remove('cart-open');
     setTimeout(() => { cartEl.hidden = true; render(); }, 250);
@@ -226,9 +233,14 @@
       'Faleminderit!',
     ].filter(l => l !== null).join('\n');
 
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    sentUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+    window.open(sentUrl, '_blank', 'noopener');
+    render();                                   // shows "Did you press Send?"
+    sentEl?.querySelector('.cart__sent-yes')?.focus();
+  });
 
-    // Order sent: empty the basket so the next visit starts fresh
+  // ----- After WhatsApp opened -----
+  function finish() {
     cart = {};
     save();
     form.reset();
@@ -239,8 +251,13 @@
     gpsBtn.querySelector('.cart__gps-label').textContent = isEn() ? 'Share my location (GPS)' : 'Dërgo vendndodhjen time (GPS)';
     errEl.hidden = true;
     close();
-    showToast(t('sent'));
+    showToast(t('thanks'));
+  }
+  sentEl?.querySelector('.cart__sent-yes')?.addEventListener('click', finish);
+  sentEl?.querySelector('.cart__sent-again')?.addEventListener('click', () => {
+    if (sentUrl) window.open(sentUrl, '_blank', 'noopener');
   });
+  sentEl?.querySelector('.cart__sent-edit')?.addEventListener('click', () => { sentUrl = null; render(); });
 
   document.addEventListener('langchange', render);
   render();
