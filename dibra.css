@@ -164,6 +164,12 @@ html[lang="en"] .gallery__grid a.ph::after{content:"View on Instagram"}
 .footer__links{display:flex;justify-content:center;flex-wrap:wrap;gap:.6rem 1.8rem;margin:1.5rem 0;
   font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
 .footer__links a:hover{color:var(--accent)}
+.footer__social{display:flex;justify-content:center;gap:.8rem;margin-bottom:1.4rem}
+.social{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--ink);
+  transition:background .2s,color .2s,transform .2s,border-color .2s}
+.social:hover{background:var(--accent);border-color:var(--accent);color:var(--bg);transform:translateY(-3px)}
+.footer__meta{display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem .8rem;font-size:.85rem;color:var(--muted);margin-bottom:1.2rem}
+.footer__meta a:hover{color:var(--accent)}
 .footer__bottom{font-size:.78rem;color:var(--muted)}
 
 @media (prefers-reduced-motion:reduce){
